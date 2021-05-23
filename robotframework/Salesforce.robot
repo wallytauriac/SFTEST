@@ -100,8 +100,8 @@ Open Test Browser
     ...  the `wait` parameter is set to False.
 
     [Arguments]  ${size}=${DEFAULT BROWSER SIZE}  ${alias}=${NONE}  ${wait}=True  ${useralias}=${NONE}
-    ${login_url}=  Run keyword if  $useralias  Login URL  alias=${useralias}
-    ...  ELSE  Login URL
+    #${login_url}=  Run keyword if  $useralias  Login URL  alias=${useralias}
+    #...  ELSE  Login URL
 
     Run Keyword If  '${BROWSER}' == 'chrome'  Open Test Browser Chrome  ${login_url}  alias=${alias}
     ...    ELSE IF  '${BROWSER}' == 'firefox'  Open Test Browser Firefox  ${login_url}  alias=${alias}
